@@ -1,0 +1,40 @@
+:root{
+  --pj-verde-escuro:#2d5a3d; --pj-verde:#7fae6a; --pj-verde-claro:#edf3e6;
+  --pj-texto:#3a3f3a; --pj-suave:#6b726b; --pj-borda:#e8eadf;
+}
+.pj-wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+.pj-hero{padding:64px 0 8px;text-align:center}
+.pj-hero h1{margin:0 0 12px;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;color:var(--pj-verde-escuro);line-height:1.1}
+.pj-hero h1 span{color:var(--pj-verde)}
+.pj-hero p{margin:0 auto;max-width:54ch;font-size:1.15rem;color:var(--pj-suave)}
+.pj-traco{width:72px;height:5px;border-radius:4px;background:var(--pj-verde);margin:28px auto 44px}
+
+/* 3 em cima, 3 embaixo */
+.pj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start;padding-bottom:96px}
+@media(max-width:1000px){.pj-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:660px){.pj-grid{grid-template-columns:1fr}}
+
+.pj-card{background:#fff;border:1px solid var(--pj-borda);border-radius:24px;overflow:hidden;box-shadow:0 6px 22px rgba(45,90,61,.07);color:var(--pj-texto)}
+.pj-foto{height:190px;background:var(--pj-verde-claro);display:grid;place-items:center;overflow:hidden}
+.pj-foto img{width:100%;height:100%;object-fit:cover}
+.pj-icone{width:80px;height:80px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--pj-verde-escuro)}
+.pj-info{padding:24px 26px 8px}
+.pj-cat{display:inline-block;font-size:.85rem;font-weight:800;color:var(--pj-verde-escuro);background:var(--pj-verde-claro);padding:4px 14px;border-radius:999px;margin-bottom:10px}
+.pj-info h2{margin:0 0 8px;font-size:1.5rem;font-weight:800;color:var(--pj-verde-escuro);line-height:1.2}
+.pj-info p{margin:0 0 16px}
+.pj-info h3{margin:0 0 6px;font-size:1.05rem;font-weight:800;color:var(--pj-verde-escuro)}
+.pj-info ul{margin:0 0 18px;padding-left:20px;font-size:.97rem}
+.pj-info li{margin-bottom:2px}
+.pj-obj{background:var(--pj-verde-claro);border-radius:16px;padding:14px 18px;margin-bottom:20px}
+.pj-obj h3{margin-bottom:4px}
+.pj-obj p{margin:0;font-size:.97rem}
+
+/* Passo a passo com seta */
+.pj-card details{border-top:1px solid var(--pj-borda)}
+.pj-card summary{list-style:none;cursor:pointer;padding:18px 26px;font-weight:800;font-size:1.05rem;color:var(--pj-verde-escuro);display:flex;justify-content:space-between;align-items:center}
+.pj-card summary::-webkit-details-marker{display:none}
+.pj-card summary svg{transition:transform .25s}
+.pj-card details[open] summary svg{transform:rotate(180deg)}
+.pj-card details[open] summary{background:var(--pj-verde-claro)}
+.pj-passos{margin:0;padding:18px 26px 26px 48px}
+.pj-passos li{margin-bottom:10px}
